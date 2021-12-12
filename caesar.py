@@ -3,7 +3,7 @@ from argparse import ArgumentParser
 
 def caeser_cipher(ciphertext: str, shift: int = 13):
     """Shifts the ciphertext by shift amount"""
-    
+    print(f'[=] Text shifted by {shift}:')
     for letter in ciphertext:
         BASE = 0 # Starting character for 
         if letter.isupper():
