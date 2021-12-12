@@ -24,4 +24,9 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     #TODO add range of shift for bruteforcing
-    caeser_cipher(args.ciphertext, args.shift)
+    if '..' in args.shift:
+        s, f = args.shift.split('..')
+        for i in range(s, f+1):
+            caeser_cipher(args.ciphertext, i)
+    else:
+        caeser_cipher(args.ciphertext, args.shift)
